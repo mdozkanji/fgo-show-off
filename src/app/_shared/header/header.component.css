@@ -12,6 +12,10 @@ header {
   align-items: center;
 }
 
+.pad {
+  height: 7em;
+}
+
 #nav-bar {
   height: fit-content;
   margin: 2em 0 0 0;
@@ -45,24 +49,20 @@ header {
   border-radius: 3em;
   padding: 0.5em 2em;
   font-size: 2em;
+  font-weight: 600;
   color: #fff;
   background: linear-gradient(
     to right bottom,
     rgba(108, 92, 231, 1),
     rgb(58, 44, 168)
   );
-  backdrop-filter: blur(2rem);
   margin-left: 50%;
   transition: all 0.3s ease;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
 }
 
 .profile:hover {
-  background: linear-gradient(
-    to right bottom,
-    rgb(58, 44, 168, 1),
-    rgba(108, 92, 231, 1)
-  );
+  transform: scale(1.2);
 }
 
 .logo {

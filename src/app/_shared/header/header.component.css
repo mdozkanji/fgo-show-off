@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+#nav-bar {
+  height: fit-content;
+  margin: 2em 0 0 0;
+  border-radius: 3em;
+  z-index: 2;
+}
+
+.menu {
+  position: absolute;
+  left: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3em;
+  padding: 0 2em 0 0;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.6)
+  );
+  backdrop-filter: blur(2rem);
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+}
+
+.profile {
+  position: absolute;
+  right: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3em;
+  padding: 0.5em 2em;
+  font-size: 2em;
+  color: #fff;
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgb(58, 44, 168)
+  );
+  backdrop-filter: blur(2rem);
+  margin-left: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+}
+
+.profile:hover {
+  background: linear-gradient(
+    to right bottom,
+    rgb(58, 44, 168, 1),
+    rgba(108, 92, 231, 1)
+  );
+}
+
+.logo {
+  height: 3.5em;
+  width: 3.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #000;
+  transform: scale(2);
+}
+
+.menu nav {
+  display: inline-flex;
+}
+
+.menu ul {
+  display: inline-flex;
+  list-style: none;
+  padding-left: 2em;
+}
+
+.menu li {
+  font-size: 2em;
+  padding: 0.5em 1em;
+  color: #6c5ce7;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.menu li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  border-radius: 3em;
+}
+
+.menu li:hover {
+  background: #fff;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  border-radius: 3em;
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+  color: #6c5ce7;
+}

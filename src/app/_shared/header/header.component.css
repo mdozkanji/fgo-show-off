@@ -87,7 +87,13 @@ header {
 .menu li {
   font-size: 2em;
   padding: 0.5em 1em;
-  color: #6c5ce7;
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgb(58, 44, 168, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
   position: relative;
   white-space: nowrap;

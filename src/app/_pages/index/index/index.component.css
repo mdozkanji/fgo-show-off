@@ -36,6 +36,25 @@
 
 .week-servant h2 {
   font-size: 1.2rem;
+  text-align: center;
+  margin: 1em;
+}
+
+.week-servant .servant-name {
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.week-servant .servant-name:hover {
+  color: rgb(58, 44, 168);
+}
+
+.week-servant .servant-class {
+  transition: all 0.2s ease;
+}
+
+.week-servant .servant-class:hover {
+  transform: scale(1.1);
 }
 
 .main {

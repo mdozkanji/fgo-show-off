@@ -1,0 +1,38 @@
+.container {
+  margin: 1em 4em;
+  padding-bottom: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 8em);
+  grid-gap: 2em;
+  justify-content: center;
+}
+
+.class-card {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(0.5rem);
+  border-radius: 3em;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.class-card:hover {
+  transform: scale(1.1);
+}
+
+.class-card h2 {
+  color: #000;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.class-card img {
+  width: 4em;
+}

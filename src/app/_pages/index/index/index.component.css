@@ -1,5 +1,6 @@
 .container {
   margin: 1em 4em;
+  padding-bottom: 1em;
   display: grid;
   grid-template-columns: 2fr 5fr;
   grid-template-areas: "week-servant main";
@@ -7,6 +8,7 @@
 }
 
 .week-servant {
+  height: fit-content;
   grid-area: week-servant;
   background: linear-gradient(
     to right bottom,

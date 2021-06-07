@@ -1,5 +1,5 @@
 <header>
-  <div id="nav-bar">
+  <div class="nav-bar">
     <div class="menu">
       <!--img class="logo" src="../../../assets/images/logo.png" alt="logo" /-->
       <div class="logo"></div>
@@ -12,6 +12,16 @@
       </nav>
     </div>
     <a class="profile" href="">Login</a>
+  </div>
+  <div class="stacked-nav-bar">
+    <button class="toggle-btn" (click)="onClick()">LOGO</button>
+    <nav>
+      <ul>
+        <a href=""><li>Servants</li></a>
+        <a href=""><li>Tools</li></a>
+        <a href=""><li>Login</li></a>
+      </ul>
+    </nav>
   </div>
 </header>
 <div class="pad"></div>

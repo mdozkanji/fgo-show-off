@@ -75,5 +75,6 @@
     grid-template-areas:
       "week-servant"
       "main";
+    margin: 1em;
   }
 }

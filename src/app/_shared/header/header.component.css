@@ -12,22 +12,17 @@
 header {
   display: flex;
   align-items: center;
-}
-
-.pad {
-  height: 7em;
+  padding: 2em 0;
 }
 
 .nav-bar {
   height: fit-content;
-  margin: 2em 0 0 0;
   border-radius: 3em;
   z-index: 2;
 }
 
 .menu {
-  position: absolute;
-  left: 5em;
+  margin-left: 5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,6 +38,7 @@ header {
 }
 
 .profile {
+  visibility: hidden;
   position: absolute;
   right: 2em;
   display: flex;
@@ -166,20 +162,20 @@ a {
   display: block;
   font-size: 2em;
   text-decoration: none;
-  padding: 4em 0;
+  padding: 1em 0;
   text-align: center;
-  color: #fff;
+  color: #6c5ce7;
   font-weight: 600;
   transition: all 0.2s ease;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .stacked-nav-bar a:hover {
-  /*TODO*/
+  transform: scale(1.2);
 }
 
 .stacked-nav-bar .toggle-btn {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 10;
   right: 2em;
@@ -198,5 +194,9 @@ a {
 
   .stacked-nav-bar {
     visibility: visible;
+  }
+
+  .stacked-nav-bar .toggle-btn {
+    display: block;
   }
 }

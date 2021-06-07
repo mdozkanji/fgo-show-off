@@ -15,11 +15,35 @@
   </div>
   <div class="stacked-nav-bar">
     <button class="toggle-btn" (click)="onClick()">LOGO</button>
-    <nav>
-      <ul>
-        <a href=""><li>Servants</li></a>
-        <a href=""><li>Tools</li></a>
-        <a href=""><li>Login</li></a>
+    <nav [ngStyle]="showMenu ? { opacity: '1', visibility: 'visible' } : {}">
+      <ul [ngStyle]="showMenu ? { top: '10em' } : {}">
+        <a href=""
+          ><li
+            [ngStyle]="
+              showMenu ? { transform: 'translateY(0px)', opacity: '1' } : {}
+            "
+          >
+            Servants
+          </li></a
+        >
+        <a href=""
+          ><li
+            [ngStyle]="
+              showMenu ? { transform: 'translateY(0px)', opacity: '1' } : {}
+            "
+          >
+            Tools
+          </li></a
+        >
+        <a href=""
+          ><li
+            [ngStyle]="
+              showMenu ? { transform: 'translateY(0px)', opacity: '1' } : {}
+            "
+          >
+            Login
+          </li></a
+        >
       </ul>
     </nav>
   </div>

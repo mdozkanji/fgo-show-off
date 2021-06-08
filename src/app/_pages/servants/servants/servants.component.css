@@ -1,0 +1,138 @@
+.container {
+  margin: 3em 4em;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(0.5rem);
+  border-radius: 3em;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  padding: 2em;
+}
+
+.container > h1 {
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgb(58, 44, 168, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.servants-container {
+  margin: 2em 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+}
+
+.servants-container > a {
+  transition: all 0.2s ease;
+}
+
+.servants-container > a:hover {
+  transform: scale(1.03);
+}
+
+.servant-card {
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgb(58, 44, 168, 1)
+  );
+  backdrop-filter: blur(0.5rem);
+  border-radius: 1em;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  padding: 1em 2em;
+  color: #fff;
+  display: flex;
+}
+
+.servant-card .id-class-icon {
+  display: flex;
+  align-items: center;
+}
+
+.servant-card .id-and-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.servant-card .id-and-class .id {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.servant-card .id-and-class .class-icon {
+  width: 4em;
+}
+
+.servant-card .servant-icon {
+  border-radius: 50%;
+  margin: 0 2em;
+}
+
+.servant-card .servant-name {
+  margin: auto;
+}
+
+@media only screen and (max-width: 1230px) {
+  .servant-card .servant-name {
+    font-size: 1.5em;
+  }
+
+  .servant-card {
+    flex-direction: column;
+  }
+
+  .servant-card .id-class-icon {
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .servants-container {
+    grid-template-columns: 1fr;
+  }
+
+  .servant-card {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .servant-card {
+    height: fit-content;
+  }
+
+  .servant-card .id-and-class .id {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .servant-card .id-and-class .class-icon {
+    width: 2em;
+  }
+
+  .servant-card .id-class-icon {
+    margin: 0;
+  }
+
+  .servant-card .servant-icon {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    margin: 0 2em;
+  }
+
+  .servant-card .servant-name {
+    font-size: 1.3em;
+    margin: 0;
+    margin: 0;
+  }
+}

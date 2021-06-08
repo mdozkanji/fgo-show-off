@@ -1,1 +1,23 @@
-<p>servant-card works!</p>
+<a routerLink=""
+  ><div class="servant-card">
+    <div class="id-class-icon">
+      <div class="id-and-class">
+        <h2 class="id">{{ servant.id }}</h2>
+        <img
+          class="class-icon"
+          src="../../../../assets/images/Classes/Class-{{
+            servant.class
+          }}-Gold.png"
+          alt="Shielder class icon"
+        />
+      </div>
+      <img
+        class="servant-icon"
+        src="../../../../assets/images/Servants/{{ servant.id }}/S{{
+          servant.id
+        }}IconRaw1.png"
+      />
+    </div>
+    <h1 class="servant-name">{{ servant.name }}</h1>
+  </div></a
+>

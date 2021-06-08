@@ -1,0 +1,16 @@
+{
+    "servants": [
+        {
+            "id": "001",
+            "name": "Mash Kyrielight",
+            "class": "Shielder",
+            "rarity": "4"
+        },
+        {
+            "id": "002",
+            "name": "Artoria Pendragon",
+            "class": "Saber",
+            "rarity": "5"
+        }
+    ]
+}

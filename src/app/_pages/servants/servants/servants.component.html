@@ -6,43 +6,9 @@
     press on its icon above.
   </p>
   <div class="servants-container">
-    <a routerLink=""
-      ><div class="servant-card">
-        <div class="id-class-icon">
-          <div class="id-and-class">
-            <h2 class="id">001</h2>
-            <img
-              class="class-icon"
-              src="../../../../assets/images/Classes/Class-Shielder-Gold.png"
-              alt="Shielder class icon"
-            />
-          </div>
-          <img
-            class="servant-icon"
-            src="../../../../assets/images/Servants/001_Mash_Kyrielight/S001IconRaw1.png"
-          />
-        </div>
-        <h1 class="servant-name">Mash Kyrielight</h1>
-      </div></a
-    >
-    <a routerLink=""
-      ><div class="servant-card">
-        <div class="id-class-icon">
-          <div class="id-and-class">
-            <h2 class="id">002</h2>
-            <img
-              class="class-icon"
-              src="../../../../assets/images/Classes/Class-Saber-Gold.png"
-              alt="Shielder class icon"
-            />
-          </div>
-          <img
-            class="servant-icon"
-            src="../../../../assets/images/Servants/002_Artoria_Pendragon/S002IconRaw1.png"
-          />
-        </div>
-        <h1 class="servant-name">Artoria Pendragon</h1>
-      </div></a
-    >
+    <app-servant-card
+      *ngFor="let servant of servants"
+      [servant]="servant"
+    ></app-servant-card>
   </div>
 </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { ServantService } from '../../../_services/servant.service';
+import { Servant } from '../../../Servant';
 
 @Component({
   selector: 'app-servants',
@@ -7,9 +9,18 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./servants.component.css'],
 })
 export class ServantsComponent implements OnInit {
-  constructor(private titleService: Title) {
+  servants: Servant[] = [];
+
+  constructor(
+    private titleService: Title,
+    private servantService: ServantService
+  ) {
     this.titleService.setTitle('FGO ShowOff | Servants');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.servantService
+      .getServants()
+      .subscribe((servants) => (this.servants = servants));
+  }
 }

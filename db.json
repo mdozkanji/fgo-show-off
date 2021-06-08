@@ -11,6 +11,12 @@
             "name": "Artoria Pendragon",
             "class": "Saber",
             "rarity": "5"
+        },
+        {
+            "id": "003",
+            "name": "Artoria Pendragon (Alter)",
+            "class": "Saber",
+            "rarity": "4"
         }
     ]
 }

@@ -1,13 +1,13 @@
-<header>
+<header *ngIf="!hasRoute('/register')">
   <div class="nav-bar">
     <div class="menu">
       <!--img class="logo" src="../../../assets/images/logo.png" alt="logo" /-->
       <a routerLink=""><div class="logo"></div></a>
       <nav>
         <ul>
-          <a routerLink="./servants"><li>Servants</li></a>
+          <a routerLink="servants"><li>Servants</li></a>
           <a routerLink=""><li>Tools</li></a>
-          <a routerLink=""><li>Login</li></a>
+          <a routerLink="register"><li>Login</li></a>
         </ul>
       </nav>
     </div>
@@ -17,7 +17,7 @@
     <button class="toggle-btn" (click)="onClick()">LOGO</button>
     <nav [ngStyle]="showMenu ? { opacity: '1', visibility: 'visible' } : {}">
       <ul [ngStyle]="showMenu ? { top: '10em' } : {}">
-        <a routerLink="./servants"
+        <a routerLink="servants"
           ><li
             [ngStyle]="
               showMenu ? { transform: 'translateY(0px)', opacity: '1' } : {}

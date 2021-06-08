@@ -1,0 +1,86 @@
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back a {
+  position: fixed;
+  z-index: 10;
+  left: 4em;
+  top: 2em;
+  width: 8em;
+  height: 4em;
+  cursor: pointer;
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgb(58, 44, 168, 1)
+  );
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.back a:hover {
+  background: rgb(108, 92, 231);
+  transform: scale(1.2);
+}
+
+.container {
+  min-height: 80vh;
+  width: 60%;
+  border-radius: 3em;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(2rem);
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgb(58, 44, 168, 1)
+  );
+  border-radius: 3em 0 0 3em;
+  color: #fff;
+  padding: 2em;
+}
+
+.left h2 {
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-top: 1em;
+  line-height: 2em;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

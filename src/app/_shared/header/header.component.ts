@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UiService } from '../../_services/ui.service';
 
 @Component({
@@ -9,11 +10,15 @@ import { UiService } from '../../_services/ui.service';
 export class HeaderComponent implements OnInit {
   showMenu: boolean = false;
 
-  constructor(private uiService: UiService) {}
+  constructor(private uiService: UiService, private router: Router) {}
 
   ngOnInit(): void {}
 
   onClick() {
     this.showMenu = this.uiService.toggleMenu();
+  }
+
+  hasRoute(route: string) {
+    return this.router.url === route;
   }
 }

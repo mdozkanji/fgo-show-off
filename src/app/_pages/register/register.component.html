@@ -1,0 +1,39 @@
+<div class="background">
+  <div class="back"><a routerLink="">back</a></div>
+  <div class="container">
+    <div class="left">
+      <h1>WHAT ARE YOU WAITING?</h1>
+      <h2>Register now & show off your waifu/ husbando!</h2>
+    </div>
+    <div class="form-container">
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <label for="ign">Username</label>
+        <input
+          type="text"
+          name="username"
+          formControlName="username"
+          required
+        />
+        <label for="ign">IGN</label>
+        <input type="text" name="ign" formControlName="ign" required />
+        <div formGroupName="friendId">
+          <label>Friend Support ID</label>
+          <input type="text" formControlName="_1" required />
+          <input type="text" formControlName="_2" required />
+          <input type="text" formControlName="_3" required />
+        </div>
+        <label for="showId">Show your info?</label>
+        <input type="checkbox" name="showId" formControlName="showId" />
+        <p>*you can always change this in your profile.</p>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          formControlName="password"
+          required
+        />
+        <button type="submit" [disabled]="!profileForm.valid">Register</button>
+      </form>
+    </div>
+  </div>
+</div>

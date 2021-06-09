@@ -6,32 +6,40 @@
       <h2>Register now & show off your waifu/ husbando!</h2>
     </div>
     <div class="form-container">
+      <h2>Register</h2>
       <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-        <label for="ign">Username</label>
-        <input
-          type="text"
-          name="username"
-          formControlName="username"
-          required
-        />
-        <label for="ign">IGN</label>
-        <input type="text" name="ign" formControlName="ign" required />
-        <div formGroupName="friendId">
-          <label>Friend Support ID</label>
-          <input type="text" formControlName="_1" required />
-          <input type="text" formControlName="_2" required />
-          <input type="text" formControlName="_3" required />
+        <div class="input">
+          <input type="email" name="email" formControlName="email" required />
+          <label for="email">E-mail</label>
         </div>
-        <label for="showId">Show your info?</label>
-        <input type="checkbox" name="showId" formControlName="showId" />
+        <div class="input">
+          <input type="text" name="ign" formControlName="ign" required />
+          <label for="ign">IGN</label>
+        </div>
+        <div class="input">
+          <div formGroupName="friendId" class="friend-id">
+            <input type="text" formControlName="_1" class="f" required />
+            <input type="text" formControlName="_2" class="f" required />
+            <input type="text" formControlName="_3" class="f" required />
+            <label>Friend Support ID</label>
+          </div>
+        </div>
+        <div class="check">
+          <input type="checkbox" name="showId" formControlName="showId" />
+          <label for="showId"
+            >Tap this to show your IGN & ID in your profile.</label
+          >
+        </div>
         <p>*you can always change this in your profile.</p>
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          formControlName="password"
-          required
-        />
+        <div class="input">
+          <input
+            type="password"
+            name="password"
+            formControlName="password"
+            required
+          />
+          <label for="password">Password</label>
+        </div>
         <button type="submit" [disabled]="!profileForm.valid">Register</button>
       </form>
     </div>

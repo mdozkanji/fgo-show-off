@@ -8,8 +8,12 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  regexp = new RegExp(
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+
   profileForm = this.fb.group({
-    username: ['', Validators.required],
+    email: ['', Validators.pattern(this.regexp)],
     ign: ['', Validators.required],
     friendId: this.fb.group({
       _1: ['', Validators.pattern('[0-9]{3}')],

@@ -11,10 +11,12 @@ import { ServantsComponent } from './_pages/servants/servants/servants.component
 import { ClassesComponent } from './_pages/servants/classes/classes.component';
 import { ServantCardComponent } from './_pages/servants/servant-card/servant-card.component';
 import { RegisterComponent } from './_pages/register/register.component';
+import { LoginComponent } from './_pages/login/login.component';
 
 const routes = [
   { path: '', component: IndexComponent },
   { path: 'servants', component: ServantsComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 ];
 
@@ -27,6 +29,7 @@ const routes = [
     ClassesComponent,
     ServantCardComponent,
     RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

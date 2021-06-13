@@ -1,4 +1,4 @@
-<header *ngIf="!hasRoute('/register')">
+<header *ngIf="!hasRoute('/register') && !hasRoute('/login')">
   <div class="nav-bar">
     <div class="menu">
       <!--img class="logo" src="../../../assets/images/logo.png" alt="logo" /-->
@@ -7,7 +7,7 @@
         <ul>
           <a routerLink="servants"><li>Servants</li></a>
           <a routerLink=""><li>Tools</li></a>
-          <a routerLink="register"><li>Login</li></a>
+          <a routerLink="login"><li>Login</li></a>
         </ul>
       </nav>
     </div>
@@ -35,7 +35,7 @@
             Tools
           </li></a
         >
-        <a routerLink=""
+        <a routerLink="login"
           ><li
             [ngStyle]="
               showMenu ? { transform: 'translateY(0px)', opacity: '1' } : {}

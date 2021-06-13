@@ -148,7 +148,6 @@ a {
   margin: 0;
   position: absolute;
   left: 50%;
-  top: 20em;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -189,7 +188,7 @@ a {
   }
 
   .pad {
-    height: 4em;
+    height: 2em;
   }
 
   .stacked-nav-bar {

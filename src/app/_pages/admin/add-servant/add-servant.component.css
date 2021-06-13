@@ -1,0 +1,61 @@
+form {
+  padding: 0 2em 2em;
+}
+
+form .input {
+  position: relative;
+}
+
+form .input input {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-bottom: 2px solid rgb(58, 44, 168);
+  outline: none;
+  background: transparent;
+}
+
+form .input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5em 0;
+  font-size: 1em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+form .input input:focus ~ label,
+form .input input:valid ~ label {
+  top: -1.5em;
+  left: 0;
+  color: rgb(58, 44, 168);
+  font-size: 0.8em;
+}
+
+form button {
+  width: 100%;
+  height: 4em;
+  margin: auto;
+  cursor: pointer;
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgba(58, 44, 168, 1)
+  );
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 2em;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: rgb(108, 92, 231);
+  transform: scale(1.1);
+}

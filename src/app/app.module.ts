@@ -13,12 +13,15 @@ import { ServantCardComponent } from './_pages/servants/servant-card/servant-car
 import { RegisterComponent } from './_pages/register/register.component';
 import { LoginComponent } from './_pages/login/login.component';
 import { FooterComponent } from './_shared/footer/footer.component';
+import { AdminComponent } from './_pages/admin/admin.component';
+import { AddServantComponent } from './_pages/admin/add-servant/add-servant.component';
 
 const routes = [
   { path: '', component: IndexComponent },
   { path: 'servants', component: ServantsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'admin', component: AdminComponent },
 ];
 
 @NgModule({
@@ -32,6 +35,8 @@ const routes = [
     RegisterComponent,
     LoginComponent,
     FooterComponent,
+    AdminComponent,
+    AddServantComponent,
   ],
   imports: [
     BrowserModule,

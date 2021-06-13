@@ -29,6 +29,10 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .container {
+    margin: 1em;
+  }
+
   .servants-container {
     grid-template-columns: 1fr;
   }

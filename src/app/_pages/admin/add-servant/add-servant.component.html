@@ -1,0 +1,19 @@
+<form [formGroup]="servantForm" (ngSubmit)="onSubmit()">
+  <div class="input">
+    <input type="text" name="id" formControlName="id" required />
+    <label for="id">Servant ID</label>
+  </div>
+  <div class="input">
+    <input type="text" name="name" formControlName="name" required />
+    <label for="name">Servant Name</label>
+  </div>
+  <div class="input">
+    <input type="text" name="class" formControlName="class" required />
+    <label for="class">Class</label>
+  </div>
+  <div class="input">
+    <input type="text" name="rarity" formControlName="rarity" required />
+    <label for="rarity">Rarity</label>
+  </div>
+  <button type="submit" [disabled]="!servantForm.valid">Add Servant</button>
+</form>

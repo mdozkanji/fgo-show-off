@@ -1,0 +1,130 @@
+.container {
+  margin: 1em 4em;
+  padding-bottom: 1em;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  grid-gap: 2em;
+}
+
+.requests {
+  height: fit-content;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(0.5rem);
+  border-radius: 3em;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.requests h1 {
+  margin-bottom: 1em;
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgb(58, 44, 168, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(0.5rem);
+  border-radius: 3em;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  padding: 2em;
+}
+
+.dashboard h1 {
+  margin-bottom: 1em;
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgb(58, 44, 168, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.dashboard .add-btn {
+  padding: 1em 2em;
+  font-size: 1.125em;
+  cursor: pointer;
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgba(58, 44, 168, 1)
+  );
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 2em;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.dashboard .add-btn:hover {
+  background: rgb(108, 92, 231);
+  transform: scale(1.2);
+}
+
+.dashboard .add-btn-mobile {
+  width: 4em;
+  height: 4em;
+  font-size: 1.125em;
+  cursor: pointer;
+  background: linear-gradient(
+    to right bottom,
+    rgba(108, 92, 231, 1),
+    rgba(58, 44, 168, 1)
+  );
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: none;
+  border-radius: 2em;
+  color: #fff;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.dashboard .add-btn-mobile:hover {
+  background: rgb(108, 92, 231);
+  transform: scale(1.2);
+}
+
+.dashboard .servants-container {
+  display: grid;
+  grid-gap: 1em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr;
+    margin: 1em;
+  }
+
+  .dashboard .add-btn {
+    display: none;
+  }
+
+  .dashboard .add-btn-mobile {
+    display: block;
+  }
+}

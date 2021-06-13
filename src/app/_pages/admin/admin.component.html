@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="requests">
+    <h1>Masters Requests</h1>
+  </div>
+  <div class="dashboard">
+    <h1>Admin Dashboard</h1>
+    <button class="add-btn">Add</button>
+    <button class="add-btn-mobile">+</button>
+    <app-add-servant></app-add-servant>
+    <div class="servants-container">
+      <!-- TODO: Search bar -->
+      <app-servant-card
+        *ngFor="let servant of servants"
+        [servant]="servant"
+      ></app-servant-card>
+    </div>
+  </div>
+</div>

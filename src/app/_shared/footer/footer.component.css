@@ -20,3 +20,9 @@ footer p {
 footer span {
   color: rgb(58, 44, 168);
 }
+
+@media only screen and (max-width: 1000px) {
+  footer {
+    margin: 1em;
+  }
+}

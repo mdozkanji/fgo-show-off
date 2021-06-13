@@ -12,6 +12,7 @@ import { ClassesComponent } from './_pages/servants/classes/classes.component';
 import { ServantCardComponent } from './_pages/servants/servant-card/servant-card.component';
 import { RegisterComponent } from './_pages/register/register.component';
 import { LoginComponent } from './_pages/login/login.component';
+import { FooterComponent } from './_shared/footer/footer.component';
 
 const routes = [
   { path: '', component: IndexComponent },
@@ -30,6 +31,7 @@ const routes = [
     ServantCardComponent,
     RegisterComponent,
     LoginComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

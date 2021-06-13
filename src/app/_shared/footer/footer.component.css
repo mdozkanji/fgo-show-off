@@ -1,0 +1,22 @@
+footer {
+  margin: 1em 4em;
+  border-radius: 3em 3em 0 0;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(2rem);
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+  padding: 2em 4em;
+  display: flex;
+  flex-direction: column;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer span {
+  color: rgb(58, 44, 168);
+}

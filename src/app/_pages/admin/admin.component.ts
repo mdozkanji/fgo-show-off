@@ -23,4 +23,10 @@ export class AdminComponent implements OnInit {
       .getServants()
       .subscribe((servants) => (this.servants = servants));
   }
+
+  addServant(servant: Servant) {
+    this.servantService
+      .addServant(servant)
+      .subscribe((servant) => this.servants.push(servant));
+  }
 }

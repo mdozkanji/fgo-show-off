@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ServantService } from '../../../_services/servant.service';
 import { Servant } from '../../../Servant';
@@ -9,13 +9,15 @@ import { Servant } from '../../../Servant';
   styleUrls: ['./add-servant.component.css'],
 })
 export class AddServantComponent implements OnInit {
+  @Output() onAddServant: EventEmitter<Servant> = new EventEmitter();
+
   servants: Servant[] = [];
 
   servantForm = this.fb.group({
     id: ['', Validators.pattern('[0-9]{3}')],
     name: ['', Validators.required],
     class: ['', Validators.required],
-    rarity: ['', Validators.required],
+    rarity: ['', Validators.pattern('[0-5]')],
   });
 
   constructor(
@@ -33,9 +35,7 @@ export class AddServantComponent implements OnInit {
       rarity: this.servantForm.get('rarity')?.value,
     };
 
-    this.servantService
-      .addServant(newServant)
-      .subscribe((newServant) => this.servants.push(newServant));
+    this.onAddServant.emit(newServant);
 
     this.servantForm.get('id')?.setValue('');
     this.servantForm.get('name')?.setValue('');

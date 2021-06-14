@@ -6,7 +6,7 @@
     <h1>Admin Dashboard</h1>
     <button class="add-btn">Add</button>
     <button class="add-btn-mobile">+</button>
-    <app-add-servant></app-add-servant>
+    <app-add-servant (onAddServant)="addServant($event)"></app-add-servant>
     <div class="servants-container">
       <!-- TODO: Search bar -->
       <app-servant-card

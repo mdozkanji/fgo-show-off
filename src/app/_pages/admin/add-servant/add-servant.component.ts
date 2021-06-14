@@ -26,6 +26,20 @@ export class AddServantComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
-    console.log(this.servantForm.value);
+    const newServant = {
+      id: this.servantForm.get('id')?.value,
+      name: this.servantForm.get('name')?.value,
+      class: this.servantForm.get('class')?.value,
+      rarity: this.servantForm.get('rarity')?.value,
+    };
+
+    this.servantService
+      .addServant(newServant)
+      .subscribe((newServant) => this.servants.push(newServant));
+
+    this.servantForm.get('id')?.setValue('');
+    this.servantForm.get('name')?.setValue('');
+    this.servantForm.get('class')?.setValue('');
+    this.servantForm.get('rarity')?.setValue('');
   }
 }

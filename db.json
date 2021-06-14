@@ -1,22 +1,28 @@
 {
-    "servants": [
-        {
-            "id": "001",
-            "name": "Mash Kyrielight",
-            "class": "Shielder",
-            "rarity": "4"
-        },
-        {
-            "id": "002",
-            "name": "Artoria Pendragon",
-            "class": "Saber",
-            "rarity": "5"
-        },
-        {
-            "id": "003",
-            "name": "Artoria Pendragon (Alter)",
-            "class": "Saber",
-            "rarity": "4"
-        }
-    ]
+  "servants": [
+    {
+      "id": "001",
+      "name": "Mash Kyrielight",
+      "class": "Shielder",
+      "rarity": "4"
+    },
+    {
+      "id": "002",
+      "name": "Artoria Pendragon",
+      "class": "Saber",
+      "rarity": "5"
+    },
+    {
+      "id": "003",
+      "name": "Artoria Pendragon (Alter)",
+      "class": "Saber",
+      "rarity": "4"
+    },
+    {
+      "id": "004",
+      "name": "Artoria Pendragon (Lily)",
+      "class": "Saber",
+      "rarity": "4"
+    }
+  ]
 }
